@@ -32,12 +32,6 @@ jobs:
             ${{ env.IMAGE }}:latest
             ${{ env.IMAGE }}:${{ github.sha }}
 
-      - name: Paketi herkese aç
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh api --method PATCH /user/packages/container/vkv-backend -f visibility=public
-
       - name: Coolify deploy
         env:
           COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
