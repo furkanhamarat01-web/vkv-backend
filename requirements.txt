@@ -1,0 +1,1 @@
+# Üçüncü parti paket yok. Python 3.11 standart kütüphanesi yeter.
